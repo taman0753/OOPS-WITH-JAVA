@@ -24,7 +24,6 @@ t2.start();
 Thread.sleep(1000); // Waiting for 1 second before starting next thread
 Thread t3 = new Thread(rc);
 t3.start();
-//Creating new instance for every thread access.
 ExtendsThread tc1 = new ExtendsThread();
 tc1.start();
 Thread.sleep(1000); // Waiting for 1 second before starting next thread
