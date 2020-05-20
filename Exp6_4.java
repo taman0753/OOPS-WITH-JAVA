@@ -1,28 +1,41 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-
-public class Collection_exp
+public class Thread_exp4
 {
-	public static void main(String args[])
-	{
-		ArrayList<String> list = new ArrayList<String>();
-		list.add("Object");
-        	list.add("Oriented");
-        	list.add("Programming");
-        	Iterator<String> itr = list.iterator();
-        	while(itr.hasNext())
-		{
-            		System.out.println(itr.next());		//prints the array list
-        	}
-		Collections.reverse(list);
-        	System.out.println("After Reverse : ");
-        	for(String str: list)
-		{
-            		System.out.println(str);		//prints the reversed array list
-        	}
-		System.out.println("Actual ArrayList:"+list);
-        	ArrayList<String> copy = (ArrayList<String>) list.clone();
-        	System.out.println("Duplicate ArrayList:"+copy);		//copies the array list
-    	}
+public static void main(String args[]) throws InterruptedException
+{
+Thread T1=new Thread();
+Thread T2=new Thread();
+Thread T3=new Thread();
+Thread T4=new Thread();
+Thread T5=new Thread();
+T1.setPriority(7);
+T2.setPriority(2);
+T3.setPriority(10);
+T4.setPriority(5);
+T5.setPriority(8);
+T1.sleep(1500);
+if (T1.isAlive())
+System.out.println("Thread 1 is alive");
+else
+System.out.println("Thread 1 is not alive");
+T2.start();
+if (T2.isAlive())
+System.out.println("Thread 2 is alive");
+else
+System.out.println("Thread 2 is not alive");
+T3.sleep(1000);
+if (T3.isAlive())
+System.out.println("Thread 3 is alive");
+else
+System.out.println("Thread 3 is not alive");
+T4.start();
+if (T4.isAlive())
+System.out.println("Thread 4 is alive");
+else
+System.out.println("Thread 4 is not alive");
+T5.start();
+if (T5.isAlive())
+System.out.println("Thread 5 is alive");
+else
+System.out.println("Thread 5 is not alive");
+}
 }
