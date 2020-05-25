@@ -26,7 +26,8 @@ class Exp7_1
 public static void main(String ar[])
 {
 int no=0;
-student s=new student(); try
+student s=new student(); 
+try
 {
 DataInputStream in= new DataInputStream(System.in); System.out.println("enter the number of students : "); no=Integer.parseInt(in.readLine());
 for(int i=0;i<no;i++); s.read();
