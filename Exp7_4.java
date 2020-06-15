@@ -23,7 +23,7 @@ catch(collision e)
 {
 System.out.println(e); 
 car2=car1;
-System.out.println("Changed the direction of car2");
+System.out.println("Change the direction of car2");
 }
 }}
 
