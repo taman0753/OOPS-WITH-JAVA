@@ -4,18 +4,21 @@ public class Arrays {
 		int a[] = { 2,9,3,4,5 };
 		int n = a.length;
 		for ( int i =0 ; i<n-1 ; i++) {
-			for ( int j = 0 ; j<n-1 ; j++) {
+			
+			boolean sorted=true;
+		
+			for ( int j = 0 ; j<n-1-i ; j++) {
 				 
 				if (a[j+1] <a[j]) {
 					
 					int temp = a[j];
 					a[j] = a[j+1];
 					a[j+1] = temp;
-					
+					 sorted = false;
 					
 				}
 					
-		}
+		} if (sorted) break;
 			
 		}
 	
@@ -26,5 +29,7 @@ public class Arrays {
 		
 
 	}
+
+
 
 
