@@ -1,0 +1,12 @@
+class Solution {
+    static String revStr(String S) {
+        String rev="";
+        char arr[]= S.toCharArray();
+        
+        for (int i = arr.length-1 ; i >= 0 ; i--)
+        {
+          rev = rev + arr[i];  
+        }
+        return rev;
+    }
+}
