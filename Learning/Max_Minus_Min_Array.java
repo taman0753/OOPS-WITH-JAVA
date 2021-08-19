@@ -1,44 +1,36 @@
 import java.util.Scanner;
 
-public class Arrays {
-
+public class maximum_minimum {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the number of elements");
+		System.out.println("Enter number of elements");
 		int n = sc.nextInt();
-		int a[] = new int[n];
-		int max = 0 , min =0;
-		int diff;
-		for ( int i =0 ; i<=n-1 ; i++) {
-			 	System.out.println("Enter the values");
-			 	a[i] = sc.nextInt();	
-			 	
-			} 
-		for ( int i =0 ; i<n-1 ; i++) {
-		 	if ( a[i+1] > a[i] ) {
-		 		 
-		 		max = a[i+1];
-		  }
-		 	else {
-		 		max = a[i];
-		 	}
+		int max = 0 ; 
+		int min = 0;
+		int arr[]= new int[n];
+		
+		System.out.println("Enter the array");
+		for ( int i = 0 ; i <=n-1; i++) {
+			arr[i]=sc.nextInt()	;
+			}
+		for (int i =0 ; i<n-1 ; i++) {
 			
-		} 
-		for ( int i =0 ; i<n-1 ; i++) {
-		 	if ( a[i+1] < a[i] ) {
-		 		 
-		 		min = a[i+1];
-		  }
-		 	else {
-		 		min = a[i];
-		 	}
+			if (arr[i]>max) {
+				max=arr[i];
+				
+			}
 			
-		} 
+		}
+		for (int i =0 ; i<n-1 ; i++) {
+			
+			if (arr[i]<min) {
+				min=arr[i];
+			}
+			
+		}
+System.out.println(max);
+System.out.println(min);
 
-//}
-System.out.println(max-min);
-
+	}
 	
-} }
-
-
+}
